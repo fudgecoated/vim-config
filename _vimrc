@@ -92,3 +92,5 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
     \endif<CR>
 "End
 
+"Powerline setting
+"let g:Powerline_symbols = 'fancy'
