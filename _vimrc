@@ -24,8 +24,8 @@ set encoding=utf-8
 set fileencodings=utf-8,cp936,chinese,latin-1
 "设置消息为英文并使用utf-8编码
 language messages en_US.utf-8
-"不自动设置字节序标记
-set nobomb
+"设置主题
+colorscheme solarized
 "设置行号
 set number
 "设置方法高亮
@@ -35,11 +35,9 @@ syntax on
 set showmatch
 "指定配色方案为256色
 set t_Co=256
-"设置主题
-colorscheme solarized
 "高亮当前行
 set cursorline
-"高亮显示结果
+"高亮显示匹配结果
 set hlsearch
 "在输入要搜索的文字时，vim实时匹配
 set incsearch
@@ -58,7 +56,11 @@ set vb t_vb=
 set autochdir
 "允许退格键的使用
 set backspace=indent,eol,start
-set whichwrap=b,s,<,>,[,] 
+set whichwrap=b,s,<,>,[,]
+"取消高亮显示匹配结果(normal模式下',-空格')
+nnoremap <leader><space> :noh<cr>
+"新建标签页(normal模式下',-t')
+nnoremap <leader>t :tabnew<cr>
 "设置在插入模式下的键移动方式
 inoremap <C-H> <Left>
 inoremap <C-J> <Down>
