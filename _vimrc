@@ -56,4 +56,3 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
     \endif<CR>
 "End
 
-
