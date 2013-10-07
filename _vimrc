@@ -5,7 +5,7 @@ let $LANG='en'
 "设置菜单为英文
 set langmenu=en
 "设置字段及大小
-set guifont=DejaVu_Sans_Mono:h10
+set guifont=Anonymous_Pro:h11
 set gfw=Consolas:h10
 "设置内部编码为utf-8
 set encoding=utf-8
@@ -28,6 +28,14 @@ set t_Co=256
 colorscheme solarized
 "高亮当前行
 set cursorline
+"设置tab和space
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set smarttab
+"根据打开的文件自动切换工作目录
+set autochdir
 "设置在插入模式下的键移动方式
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -47,4 +55,5 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions+=m <Bar>
     \endif<CR>
 "End
+
 
