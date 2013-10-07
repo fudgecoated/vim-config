@@ -1,5 +1,16 @@
 set nocompatible
 
+"自动载入配置文件不需要重启
+autocmd! bufwritepost _vimrc source %
+
+"判定当前操作系统类型
+if(has("win32") || has("win95") || has("win64") || has("win16")) 
+    let g:iswindows=1
+else
+    let g:iswindows=0
+endif
+"End
+
 "设置英文语言环境
 let $LANG='en'
 "设置菜单为英文
@@ -28,19 +39,31 @@ set t_Co=256
 colorscheme solarized
 "高亮当前行
 set cursorline
+"高亮显示结果
+set hlsearch
+"在输入要搜索的文字时，vim实时匹配
+set incsearch
+"修改leader(默认为\)键为逗号
+let mapleader=","
 "设置tab和space
 set tabstop=4
-set shiftwidth=4
-set expandtab
-set softtabstop=4
-set smarttab
+"set shiftwidth=4
+"set expandtab
+"set softtabstop=4
+"set smarttab
+"不自动换行
+set nowrap
+set vb t_vb=
 "根据打开的文件自动切换工作目录
 set autochdir
+"允许退格键的使用
+set backspace=indent,eol,start
+set whichwrap=b,s,<,>,[,] 
 "设置在插入模式下的键移动方式
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+inoremap <C-H> <Left>
+inoremap <C-J> <Down>
+inoremap <C-K> <Up>
+inoremap <C-L> <Right>
 "End
 
 
@@ -55,4 +78,3 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions+=m <Bar>
     \endif<CR>
 "End
-
