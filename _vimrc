@@ -1,7 +1,7 @@
 set nocompatible
 
 "自动载入配置文件不需要重启
-autocmd! bufwritepost _vimrc source %
+"autocmd! bufwritepost _vimrc source %
 
 "判定当前操作系统类型
 if(has("win32") || has("win95") || has("win64") || has("win16")) 
@@ -35,6 +35,8 @@ syntax on
 set showmatch
 "指定配色方案为256色
 set t_Co=256
+"设置命令行高为2
+set cmdheight=2
 "高亮当前行
 set cursorline
 "高亮显示匹配结果
@@ -42,7 +44,7 @@ set hlsearch
 "在输入要搜索的文字时，vim实时匹配
 set incsearch
 "修改leader(默认为\)键为逗号
-let mapleader=","
+let mapleader=','
 "设置tab和space
 set tabstop=4
 "set shiftwidth=4
@@ -55,8 +57,7 @@ set vb t_vb=
 "据打开的文件自动切换工作目录
 set autochdir
 "允许退格键的使用
-set backspace=indent,eol,start
-set whichwrap=b,s,<,>,[,]
+"set backspace=indent,eol,start whichwrap+=<,>,[,]
 "取消/开启高亮显示匹配结果(normal模式下',-空格')
 nnoremap <leader><space> :set hls!<CR>
 "取消/开启自动换行
