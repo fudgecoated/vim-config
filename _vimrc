@@ -52,13 +52,15 @@ set tabstop=4
 "不自动换行
 set nowrap
 set vb t_vb=
-"根据打开的文件自动切换工作目录
+"据打开的文件自动切换工作目录
 set autochdir
 "允许退格键的使用
 set backspace=indent,eol,start
 set whichwrap=b,s,<,>,[,]
-"取消高亮显示匹配结果(normal模式下',-空格')
-nnoremap <leader><space> :noh<cr>
+"取消/开启高亮显示匹配结果(normal模式下',-空格')
+nnoremap <leader><space> :set hls!<CR>
+"取消/开启自动换行
+nnoremap <leader>w :set wrap!<CR>
 "新建标签页(normal模式下',-t')
 nnoremap <leader>t :tabnew<cr>
 "设置在插入模式下的键移动方式
@@ -80,3 +82,4 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions+=m <Bar>
     \endif<CR>
 "End
+
