@@ -57,7 +57,7 @@ set vb t_vb=
 "据打开的文件自动切换工作目录
 set autochdir
 "允许退格键的使用
-"set backspace=indent,eol,start whichwrap+=<,>,[,]
+set backspace=indent,eol,start whichwrap+=<,>,[,]
 "取消/开启高亮显示匹配结果(normal模式下',-空格')
 nnoremap <leader><space> :set hls!<CR>
 "取消/开启自动换行

@@ -88,8 +88,8 @@ fun <SID>ToggleAutoCloseMappings() " --- {{{2
         "inoremap <silent> { {<C-R>=<SID>CloseStackPush('}')<CR>
         inoremap <silent> { <C-R>=<SID>OpenSpecial('{','}')<CR>
         inoremap <silent> } <C-R>=<SID>CloseStackPop('}')<CR>
-        inoremap <silent> <BS> <C-R>=<SID>OpenCloseBackspace()<CR>
-        inoremap <silent> <C-h> <C-R>=<SID>OpenCloseBackspace()<CR>
+        "inoremap <silent> <BS> <C-R>=<SID>OpenCloseBackspace()<CR>
+        "inoremap <silent> <C-h> <C-R>=<SID>OpenCloseBackspace()<CR>
         inoremap <silent> <Esc> <C-R>=<SID>CloseStackPop('')<CR><Esc>
         inoremap <silent> <C-[> <C-R>=<SID>CloseStackPop('')<CR><C-[>
         "the following simply creates an ambiguous mapping so vim fully
