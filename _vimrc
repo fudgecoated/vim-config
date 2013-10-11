@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 
 "自动载入配置文件不需要重启
 "autocmd! bufwritepost _vimrc source %
@@ -24,8 +25,6 @@ set encoding=utf-8
 set fileencodings=utf-8,cp936,chinese,latin-1
 "设置消息为英文并使用utf-8编码
 language messages en_US.utf-8
-"设置主题
-colorscheme solarized
 "设置行号
 set number
 "设置方法高亮
@@ -84,3 +83,23 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
     \endif<CR>
 "End
 
+"Vundle Setting {
+set rtp+=$VIM/vimfiles/bundle/vundle/
+call vundle#rc('$VIM/vimfiles/bundle/')
+
+ " let Vundle manage Vundle
+ " required! 
+Bundle 'gmarik/vundle'
+
+"}
+
+"My Bundles Setting {
+
+"设置主题
+Bundle 'altercation/vim-colors-solarized'
+set background=dark
+colorscheme solarized
+
+"}
+
+ filetype plugin indent on     " required!
