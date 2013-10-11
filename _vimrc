@@ -48,7 +48,6 @@ let mapleader=','
 set tabstop=4
 "set shiftwidth=4
 "set expandtab
-"set softtabstop=4
 "set smarttab
 "不自动换行
 set nowrap
@@ -129,4 +128,7 @@ Bundle 'plasticboy/vim-markdown'
 let g:vim_markdown_initial_foldlevel=1
 "}
 
- filetype plugin indent on     " required!
+"JavaScript
+Bundle 'pangloss/vim-javascript'
+
+filetype plugin indent on     " required!
