@@ -18,7 +18,7 @@ let $LANG='en'
 set langmenu=en
 "设置字段及大小
 set guifont=Anonymous_Pro:h11
-set gfw=YouYuan:h11
+set gfw=YtYaHei:h11
 "设置内部编码为utf-8
 set encoding=utf-8
 "设置打开文件时使用的编码顺序
