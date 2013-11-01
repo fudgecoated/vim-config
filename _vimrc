@@ -17,7 +17,7 @@ let $LANG='en'
 "设置菜单为英文
 set langmenu=en
 "设置字段及大小
-set guifont=Anonymous_Pro:h11
+set guifont=Consolas:h11
 set gfw=YtYaHei:h11
 "设置内部编码为utf-8
 set encoding=utf-8
@@ -52,6 +52,8 @@ set tabstop=4
 "不自动换行
 set nowrap
 set vb t_vb=
+"增强命令行的搜索显示
+set wildmenu
 "据打开的文件自动切换工作目录
 set autochdir
 "允许退格键的使用
@@ -66,8 +68,9 @@ nnoremap <leader>t :tabnew<cr>
 "Status line {
 set laststatus=2
 set statusline=
-set statusline+=%-3.3n                      " buffer number
-set statusline+=%f                          " filename
+"set statusline+=%-3.3n                      " buffer number
+set statusline+=%F%m%r%h%w                   "path+filename
+set statusline+=\[row=%l,col=%v]			"show line and column
 set statusline+=%h%m%r%w                     " status flags
 set statusline+=[%{strlen(&ft)?&ft:'none'}] " file type
 set statusline+=%=                           " right align remainder
@@ -90,7 +93,6 @@ inoremap <C-J> <Down>
 inoremap <C-K> <Up>
 inoremap <C-L> <Right>
 "}
-
 
 "设置菜单和工具条通过快捷键F2显示和隐藏 {
 set guioptions-=m
